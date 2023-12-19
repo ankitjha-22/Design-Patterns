@@ -17,6 +17,9 @@ You want to enforce a specific construction order: The Builder Pattern allows yo
 construction process, ensuring that the object is only constructed when it's fully configured.
 */
 
+// https://www.youtube.com/watch?v=oP76NM4qZhw
+// https://www.youtube.com/watch?v=zAByFmRs6No
+
 // Product class
 class House {
   constructor() {
@@ -67,3 +70,50 @@ const house = builder
   .getResult();
 
 house.describe();
+
+// Ex-2
+class BookBuilder {
+  constructor() {
+    this.name = "";
+    this.author = "";
+    this.price = 0;
+    this.category = "";
+  }
+
+  withName(name) {
+    this.name = name;
+    return this;
+  }
+
+  withAuthor(author) {
+    this.author = author;
+    return this;
+  }
+
+  withPrice(price) {
+    this.price = price;
+    return this;
+  }
+
+  withCategory(category) {
+    this.category = category;
+    return this;
+  }
+
+  build() {
+    return {
+      name: this.name,
+      author: this.author,
+      prices: this.price,
+      category: this.category
+    };
+  }
+}
+
+//Calling the builder class
+const book = new BookBuilder()
+  .withName("The Reckonings")
+  .withAuthor("Lacy Johnson")
+  .withPrice(31)
+  .withCategory("Literature")
+  .build();
