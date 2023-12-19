@@ -5,6 +5,18 @@ The pattern is particularly useful when an object has a large number of paramete
 you want to provide a more readable and maintainable way to create instances of that object.
 */
 
+/*
+The Builder Pattern is useful in scenarios where:
+The construction of an object is complex: If an object requires a lot of parameters or intricate steps to be 
+constructed, the Builder Pattern can make the code more readable and maintainable.
+
+The object has multiple representations: If you need to create different representations of the same object, 
+using a builder for each representation can be more flexible than having multiple constructors or factory methods.
+
+You want to enforce a specific construction order: The Builder Pattern allows you to enforce a step-by-step 
+construction process, ensuring that the object is only constructed when it's fully configured.
+*/
+
 // Product class
 class House {
   constructor() {
