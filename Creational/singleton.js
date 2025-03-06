@@ -9,8 +9,6 @@
 // The Singleton Pattern limits the number of instances of a particular object to just one.
 // This single instance is called the singleton.
 
-//Resource: https://refactoring.guru/design-patterns/singleton
-
 //Example 1
 function SingleTon() {
   let instance;

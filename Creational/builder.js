@@ -17,9 +17,6 @@ You want to enforce a specific construction order: The Builder Pattern allows yo
 construction process, ensuring that the object is only constructed when it's fully configured.
 */
 
-// https://www.youtube.com/watch?v=oP76NM4qZhw
-// https://www.youtube.com/watch?v=zAByFmRs6No
-
 // Product class
 class House {
   constructor() {
@@ -105,7 +102,7 @@ class BookBuilder {
       name: this.name,
       author: this.author,
       prices: this.price,
-      category: this.category
+      category: this.category,
     };
   }
 }
